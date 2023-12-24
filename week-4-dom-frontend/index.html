@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Calculator</title>
+    <style>
+      h1 {
+        font-size: 25px;
+        background-color: rgb(2, 84, 84);
+        color: white;
+        font-size: large;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .inp {
+        margin: 10px;
+        text-align: center;
+        font-size: 25px;
+        border-radius: 5px;
+        border: none;
+        border: 1px solid grey;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      .btn {
+        margin: 10px;
+        padding: 5px 10px;
+        background-color: gray;
+        color: aliceblue;
+        border: none;
+        border: 1px solid white;
+        font-size: 25px;
+      }
+
+      .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Calculator</h1>
+      <input
+        type="number"
+        placeholder="num1"
+        id="num1"
+        class="inp"
+      /><br /><br />
+      <input
+        type="number"
+        placeholder="num2"
+        id="num2"
+        class="inp"
+      /><br /><br />
+      <button class="btn" onclick="calculateSum()">CalculateSum</button
+      ><br /><br />
+      <div class="Total"></div>
+    </div>
+
+    <script>
+      function calculateSum() {
+        console.log("ajay");
+        const num1 = document.querySelector("#num1").value;
+        const num2 = document.querySelector("#num2").value;
+        const total = parseInt(num1) + parseInt(num2);
+        console.log(total);
+        document.querySelector(".Total").innerHTML =
+          "<b>Total Sum =  " + total + "</b>";
+      }
+    </script>
+  </body>
+</html>
